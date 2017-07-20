@@ -13,6 +13,11 @@ namespace Microsoft.LiveMeeting.RecordingExporter
             textBoxConfCenter.Text = Config.ConfCenterName;
             textBoxUsername.Text = Config.Username;
             textBoxPassword.Text = Config.Password;
+
+            textRecViewerName.Text = Config.RecViewerName;
+            textRecViewerCompany.Text = Config.RecViewerCompany;
+            textRecViewerEmail.Text = Config.RecViewerEmail;
+
             if (!string.IsNullOrWhiteSpace(Config.PostingURL))
             {
                 valueURL.Text = Config.PostingURL;
@@ -32,9 +37,16 @@ namespace Microsoft.LiveMeeting.RecordingExporter
         {
             Config.Username = textBoxUsername.Text;
             Config.Password = textBoxPassword.Text;
+            Config.RecViewerName = textRecViewerName.Text;
+            Config.RecViewerCompany = textRecViewerCompany.Text;
+            Config.RecViewerEmail = textRecViewerEmail.Text;
+
             Properties.Settings.Default.Username = Config.Username;
             Properties.Settings.Default.ConfCenter = Config.ConfCenterName;
             Properties.Settings.Default.PostingURL = Config.PostingURL;
+            Properties.Settings.Default.RecViewerName = Config.RecViewerName;
+            Properties.Settings.Default.RecViewerCompany = Config.RecViewerCompany;
+            Properties.Settings.Default.RecViewerEmail = Config.RecViewerEmail;
             Properties.Settings.Default.Save();
             DialogResult = DialogResult.OK;
         }

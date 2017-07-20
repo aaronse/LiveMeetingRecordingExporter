@@ -99,6 +99,7 @@
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EULA.txt" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

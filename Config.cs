@@ -14,12 +14,21 @@ namespace Microsoft.LiveMeeting.RecordingExporter
         public static string PostingURL { get; set; }
         public static string Username { get; set; }
         public static string Password { get; set; }
+
+        public static string RecViewerEmail { get; set; }
+        public static string RecViewerName { get; set; }
+        public static string RecViewerCompany { get; set; }
+
         public static bool IsValidPostingUrl { get; set; }
 
         public static void LoadSettings()
         {
             Username = Properties.Settings.Default.Username;
             ConfCenterName = Properties.Settings.Default.ConfCenter;
+            RecViewerCompany = Properties.Settings.Default.RecViewerCompany;
+            RecViewerEmail = Properties.Settings.Default.RecViewerEmail;
+            RecViewerName = Properties.Settings.Default.RecViewerName;
+
             if (!string.IsNullOrWhiteSpace(ConfCenterName))
                 UpdatePostingURL();
             else
