@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Microsoft.LiveMeeting.RecordingExporter
@@ -86,6 +80,12 @@ namespace Microsoft.LiveMeeting.RecordingExporter
                 !string.IsNullOrWhiteSpace(textBoxPassword.Text);
 
             buttonSave.Enabled = isValid;
+        }
+
+        private void linkPrivacy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://go.microsoft.com/fwlink/?LinkId=521839");
+            Process.Start(sInfo);
         }
     }
 }

@@ -57,7 +57,8 @@ namespace Microsoft.LiveMeeting.RecordingExporter
                 Application.Exit();
             }
 
-            RefreshRecordingList();
+            if (Config.IsConfigValid())
+                RefreshRecordingList();
         }
 
         void GetSettings()
