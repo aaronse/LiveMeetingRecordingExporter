@@ -99,6 +99,7 @@
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Executable\license.txt" />
     <Content Include="Executable\Microsoft Live Meeting Recording Exporter.exe" />
     <Content Include="Icon.ico" />
   </ItemGroup>
